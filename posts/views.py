@@ -6,9 +6,9 @@ from posts.models import Post
 
 def index(request):
     posts = Post.objects.all()
-    return render(request, 'index.html', {'posts': posts})
+    return render(request, 'blog_index.html', {'posts': posts})
 
 
 def post(request, post_id):
     post = Post.objects.get(id=post_id)
-    return render(request, 'post.html', {'post': post})
+    return render(request, 'blog_post.html', {'post': post})
